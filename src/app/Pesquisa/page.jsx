@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { fetchCards } from "../../API/fetchCards";
 import Image from "next/image";
