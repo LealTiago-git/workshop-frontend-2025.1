@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Projeto Pokémon TCG
 
-## Getting Started
+Este projeto é uma aplicação web que permite aos usuários visualizar e pesquisar cartas de Pokémon TCG. A aplicação é construída utilizando React e Next.js, e consome a API do Pokémon TCG para obter os dados das cartas.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Página Inicial**: Apresenta um carrossel de cartas de Pokémon, também permite aos usuários pesquisar cartas de Pokémon pelo nome.
+- **Pacote de Cartas**: Mostra um pacote de 6 cartas aleatórias.
+- **Visualização de Cartas**: Exibe todas as cartas disponíveis.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura do Projeto
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **/src/app/Carrossel/page.jsx**: Componente que exibe um carrossel de cartas de Pokémon.
+- **/src/app/Pesquisa/page.jsx**: Componente que permite pesquisar cartas de Pokémon pelo nome.
+- **/src/app/Pacote/page.jsx**: Componente que exibe um pacote de 6 cartas aleatórias.
+- **/src/app/Cartas/page.jsx**: Componente que exibe todas as cartas disponíveis.
+- **/src/API/fetchCards.js**: Função que consome a API do Pokémon TCG para obter os dados das cartas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Observações para o projeto
 
-## Learn More
+- as cores escolhidas durante o projeto foram de uma paleta de cor que eu achei na internet, os svg também foram pegos da internet
 
-To learn more about Next.js, take a look at the following resources:
+- A base do carrossel foi pega no flowbite, tive que mapear as cartas com o atual, o anterior e o próximo do indíce do array, para conseguir deixar ele mostrando mais de uma carta (sei que poderia ter deixado estático)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- A seção do pacote eu peguei a base no w3schools, a parte do math.random() e o slice, mas eles apenas geram os ids aleatórios, e jogam pra um array copiado do arrei que veio fetch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- O componente da pesquisa, foi pega a base do workshop de quarta-feira 26/02, que é apenas pra filtrar, além disso, a pesquisa só mostra quando tem mais de 0 digitos no imput
 
-## Deploy on Vercel
+- O componente de cartas é apenas um map do array recebido da api, usando o id como chave
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Tentei o maximo para deixar todas as variáveis autoexplicativas
