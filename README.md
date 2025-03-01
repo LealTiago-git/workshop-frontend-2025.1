@@ -1,5 +1,7 @@
 # Projeto Pokémon TCG
 
+# Está no Vercel: https://workshop-frontend-2025-1-u6h1.vercel.app/
+
 Este projeto é uma aplicação web que permite aos usuários visualizar e pesquisar cartas de Pokémon TCG. A aplicação é construída utilizando React e Next.js, e consome a API do Pokémon TCG para obter os dados das cartas.
 
 ## Funcionalidades
